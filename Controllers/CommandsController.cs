@@ -103,7 +103,7 @@ namespace Commander.Controllers
     }
 
 
-    // PATCH api/commands/{id}
+    // DELETE api/commands/{id}
     [HttpDelete("{id}")]
     public ActionResult DeleteCommand(int id)
     {
