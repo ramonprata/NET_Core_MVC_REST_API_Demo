@@ -27,6 +27,10 @@
 
 - Properties/launchSettings.json
 
+  - applicationUrl
+  - environmentVariables
+  - Other things
+
 - <AppName.csproj>
 
   - package references
