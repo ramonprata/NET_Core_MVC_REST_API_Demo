@@ -43,7 +43,7 @@
 
 - **EntityName**Context: the link between a DBEntity and ModelEntity
 - **EntityName**Respository: a class to interect with DBEntities via **EntityName**Context
-- **I\*\***<EntityName>\*\*Respository: an interface that the repository should implement. Decoupling the repository into interface and implementation, makes it easier to apply dependency injection (relying only on the interface) and also maintain the code
+- **IEntityName>**Respository: an interface that the repository should implement. Decoupling the repository into interface and implementation, makes it easier to apply dependency injection (relying only on the interface) and also maintain the code
 
 ## Dtos
 
@@ -57,10 +57,10 @@
 
 ## Controllers
 
-- Classes responsible for handle the Http requests and respond them
-- Setup in Startup -> ConfigureServices
+- Classes responsible for handle the HTTP requests coming to that specific route, and respond them
+- Setup in `Startup -> ConfigureServices`
 - Uses dependency injection to interact with the other layers via interfaces
-- They are the very last "thing" that will execute in the Http pipeline: Startup -> Configure
+- They are the very last "thing" that will execute in the HTTP pipeline: `Startup -> Configure`
 
 ## Help
 
