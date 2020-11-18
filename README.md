@@ -7,31 +7,31 @@
 - .NET cli
 - Entity framework tool: `dotnet tool install --global dotnet-ef`
 
-## root folder
+## Root
 
-- Startup.cs
+- **Startup.cs**
 
-  - Cofigure services
+  - **Cofigure services**
     - setup all the services you might need in your container
       - DB context
       - Controllers
       - Mapper
       - Dependency injections
-  - Configure
+  - **Configure**
     - setup HTTP pipeline (middlewares)
 
-- appsettings.json
+- **appsettings.json**
 
   - Setup DB ConnectionStrings
   - Other things
 
-- Properties/launchSettings.json
+- **Properties/launchSettings.json**
 
   - applicationUrl
   - environmentVariables
   - Other things
 
-- <AppName.csproj>
+- **AppName.csproj**
 
   - package references
 
