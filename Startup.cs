@@ -13,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json.Serialization;
 
 namespace Commander
 {
@@ -29,7 +30,15 @@ namespace Commander
     public void ConfigureServices(IServiceCollection services)
     {
       services.AddDbContext<CommandContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("CommanderConnection")));
-      services.AddControllers();
+
+      // services.AddControllers();
+
+      // to perform HTTP PATCH method easier
+      services.AddControllers().AddNewtonsoftJson(s =>
+      {
+        s.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+      });
+
       services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
       // Adding dependy injection 

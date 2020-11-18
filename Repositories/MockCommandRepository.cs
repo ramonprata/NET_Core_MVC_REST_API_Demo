@@ -5,6 +5,16 @@ namespace Commander.Repositories
 {
   public class MockCommandRepository : ICommandRepository
   {
+    public void CreateCommand(Command command)
+    {
+      throw new System.NotImplementedException();
+    }
+
+    public void DeleteCommand(Command command)
+    {
+      throw new System.NotImplementedException();
+    }
+
     public IEnumerable<Command> GetAllCommands()
     {
       var commands = new List<Command> {
@@ -36,6 +46,16 @@ namespace Commander.Repositories
         Line = "command line..",
         Plataform = "plataform.."
       };
+    }
+
+    public bool SaveChanges()
+    {
+      throw new System.NotImplementedException();
+    }
+
+    public void UpdateCommand(Command command)
+    {
+      throw new System.NotImplementedException();
     }
   }
 }
