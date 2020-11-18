@@ -41,28 +41,28 @@
 
 ## Repositories
 
-- **EntityNameContext:** the link between a DBEntity and ModelEntity
+- **EntityNameContext:** a link between a DBEntity and ModelEntity
 - **EntityNameRespository:** a class to interect with DBEntities via **EntityNameContext**
 - **IEntityNameRespository:** an interface that the repository should implement. Decoupling the repository into interface and implementation, makes it easier to apply dependency injection (relying only on the interface) and also maintain the code
 
 ## Dtos
 
-- **EntityNameDto:** a class that can be used to map(transform) data.
+- **EntityNameDto:** used to map(transform) data from/to classes/entities.
 
   - Ex.: including, removing or changing data and properties from our models to a transformed output model
 
 ## Profiles
 
-- a class that creates the mapping between **A** and its respective **Dto** and vice-versa.
+- responsible for creates a mapping between **ClassA** and its respective **ClassADto** and vice-versa.
   - **A** -> **ADto**
   - **ADto** -> **A**
 
 ## Controllers
 
-- Classes responsible for handle the HTTP requests coming to that specific route, and respond them
+- responsible for handle the HTTP requests coming to that specific route, and respond them
 - Setup in `Startup -> ConfigureServices`
-- Uses dependency injection to interact with the other layers via interfaces
-- They are the very last "thing" that will execute in the HTTP pipeline: `Startup -> Configure`
+- uses dependency injection to interact with the other layers via interfaces
+- they are the very last "thing" that will execute in the HTTP pipeline: `Startup -> Configure`
 
 ## Help
 
