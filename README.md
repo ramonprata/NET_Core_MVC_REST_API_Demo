@@ -41,17 +41,19 @@
 
 ## Repositories
 
-- **EntityName**Context: the link between a DBEntity and ModelEntity
-- **EntityName**Respository: a class to interect with DBEntities via **EntityName**Context
-- **IEntityName>**Respository: an interface that the repository should implement. Decoupling the repository into interface and implementation, makes it easier to apply dependency injection (relying only on the interface) and also maintain the code
+- **EntityNameContext:** the link between a DBEntity and ModelEntity
+- **EntityNameRespository:** a class to interect with DBEntities via **EntityNameContext**
+- **IEntityNameRespository:** an interface that the repository should implement. Decoupling the repository into interface and implementation, makes it easier to apply dependency injection (relying only on the interface) and also maintain the code
 
 ## Dtos
 
-- **EntityName**Dto: a class that can be used to map(transform) data.
+- **EntityNameDto:** a class that can be used to map(transform) data.
 
   - Ex.: including, removing or changing data and properties from our models to a transformed output model
 
-- Profiles: a class that creates the mapping between **A** and its respective **Dto** and vice-versa.
+## Profiles
+
+- a class that creates the mapping between **A** and its respective **Dto** and vice-versa.
   - **A** -> **ADto**
   - **ADto** -> **A**
 
