@@ -43,7 +43,7 @@
 
 - **EntityNameContext:** a link between a DBEntity and ModelEntity
 - **EntityNameRespository:** a class to interect with DBEntities via **EntityNameContext**
-- **IEntityNameRespository:** an interface that the repository should implement. Decoupling the repository into interface and implementation, makes it easier to apply dependency injection (relying only on the interface) and also maintain the code
+- **IEntityNameRespository:** an interface that the repository should implement. Decoupling the repository into interface and implementation, makes it easier maintaining the code and also to apply dependency injection (relying only on the interface)
 
 ## Dtos
 
