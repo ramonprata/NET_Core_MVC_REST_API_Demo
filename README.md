@@ -60,19 +60,19 @@
 ## Controllers
 
 - responsible for handle the HTTP requests coming to that specific route, and respond them
-- Setup in `Startup -> ConfigureServices`
-- uses dependency injection to interact with the other layers via interfaces
+- setup in `Startup -> ConfigureServices`
+- uses dependency injection to interact with other layers via interfaces
 - they are the very last "thing" that will execute in the HTTP pipeline: `Startup -> Configure`
 
 ## Help
 
-- Migrations commands
+- **Migrations commands**
 
   - dotnet ef migrations add <migrationName>
   - dotnet ef migrations remove
   - dotnet ef database update
 
-- Run API commands
+- **Run API commands**
   - dotnet build
   - dotnet run
 
